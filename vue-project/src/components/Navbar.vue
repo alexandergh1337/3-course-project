@@ -7,7 +7,12 @@ export default {
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">ElectroShop</a>
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img class="logo"
+                    src="https://cdn-icons-png.freepik.com/256/6572/6572765.png?ga=GA1.1.311673308.1729616116&semt=ais_hybrid"
+                    alt="light">
+                <span class="brand-name ms-2">ElectroShop</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,6 +61,16 @@ export default {
 </template>
 
 <style scoped>
+.logo {
+    width: 32px;
+    height: 32px;
+}
+
+.brand-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
 .navbar-nav img {
     margin-left: 8px;
 }
