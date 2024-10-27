@@ -84,6 +84,21 @@ export default {
                         </div>
                     </div>
                 </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
+                            Какие способы доставки вы предлагаете?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Мы предлагаем доставку курьером, самовывоз из магазина и почтовую доставку.
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

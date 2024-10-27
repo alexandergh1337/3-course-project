@@ -48,7 +48,7 @@ export default {
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://zen.yandex.ru" class="text-dark" aria-label="Яндекс Дзен">
+                        <a href="https://dzen.ru" class="text-dark" aria-label="Яндекс Дзен">
                             <img class="social-icon"
                                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Yandex_Zen_logo_icon.svg/512px-Yandex_Zen_logo_icon.svg.png"
                                 alt="Яндекс Дзен">
