@@ -19,8 +19,8 @@ export default {
                     <ul class="list-unstyled">
                         <li>
                             <i class="bi bi-geo-alt"></i> Адрес:
-                            <a href="https://www.google.com/maps/search/?api=1&query=ул.+Пушкина,+12,+Москва"
-                                target="_blank" class="text-dark"> ул. Пушкина, 12, Москва</a>
+                            <a href="https://yandex.ru/maps/?ll=37.621587%2C55.753924&z=16&text=Москва%2C%20Красная%20площадь%2C%203"
+                                target="_blank" class="text-dark"> Москва, Красная площадь, 3</a>
                         </li>
                         <li>
                             <i class="bi bi-phone" style="margin-right: 3px;"></i>

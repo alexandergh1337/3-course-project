@@ -105,10 +105,6 @@ export default {
 </template>
 
 <style scoped>
-.faq-section {
-    background-color: #f8f9fa;
-}
-
 .faq-section h2 {
     font-weight: 700;
 }

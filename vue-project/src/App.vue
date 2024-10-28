@@ -4,6 +4,7 @@ import ContactForm from './components/ContactForm.vue';
 import Footer from './components/Footer.vue';
 import FAQ from './components/FAQ.vue';
 import Carousel from './components/Carousel.vue';
+import ClientReviews from './components/ClientReviews.vue';
 
 export default {
   name: "App",
@@ -12,7 +13,8 @@ export default {
     ContactForm,
     Footer,
     FAQ,
-    Carousel
+    Carousel,
+    ClientReviews
   }
 };
 </script>
@@ -23,6 +25,8 @@ export default {
   <Carousel />
 
   <FAQ />
+
+  <ClientReviews />
 
   <ContactForm />
 
