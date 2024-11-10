@@ -5,6 +5,8 @@ import Footer from './components/Footer.vue';
 import FAQ from './components/FAQ.vue';
 import Carousel from './components/Carousel.vue';
 import ClientReviews from './components/ClientReviews.vue';
+import Benefits from './components/Benefits.vue';
+import PopularProducts from './components/PopularProducts.vue';
 
 export default {
   name: "App",
@@ -14,7 +16,9 @@ export default {
     Footer,
     FAQ,
     Carousel,
-    ClientReviews
+    ClientReviews,
+    Benefits,
+    PopularProducts
   }
 };
 </script>
@@ -23,6 +27,10 @@ export default {
   <Navbar />
 
   <Carousel />
+
+  <Benefits />
+
+  <PopularProducts />
 
   <FAQ />
 
