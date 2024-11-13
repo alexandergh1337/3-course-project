@@ -33,12 +33,11 @@ export default {
                 </div>
             </div>
             <div class="text-center mt-4">
-                <a class="btn btn-primary" href="#">Перейти в каталог</a>
+                <router-link to="/catalog" class="btn btn-primary">Перейти в каталог</router-link>
             </div>
         </div>
     </section>
 </template>
-
 
 <style scoped>
 .popular-products-section {

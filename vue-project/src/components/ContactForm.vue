@@ -1,4 +1,6 @@
 <script>
+import { gsap } from "gsap";
+
 export default {
     data() {
         return {
@@ -22,16 +24,22 @@ export default {
             this.name = '';
             this.email = '';
             this.message = '';
+
+            this.$nextTick(() => {
+                gsap.fromTo(".custom-alert", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.5 });
+            });
         },
         setAlertTimeout() {
             this.alertTimeout = setTimeout(() => {
-                this.showAlert = false;
+                this.closeAlert();
             }, this.remainingTime - this.elapsedTime);
         },
         closeAlert() {
-            this.showAlert = false;
-            clearTimeout(this.alertTimeout);
-            this.elapsedTime = 0;
+            gsap.to(".custom-alert", { opacity: 0, y: 50, duration: 0.5, onComplete: () => {
+                this.showAlert = false;
+                clearTimeout(this.alertTimeout);
+                this.elapsedTime = 0;
+            }});
         },
         pauseAlert() {
             clearTimeout(this.alertTimeout);

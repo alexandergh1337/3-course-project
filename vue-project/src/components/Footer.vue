@@ -39,16 +39,16 @@ export default {
                     <h5 class="text-uppercase">Навигация</h5>
                     <ul class="list-unstyled mb-0">
                         <li>
-                            <a href="#!" class="text-dark">Главная</a>
+                            <router-link to="/" class="text-dark">Главная</router-link>
                         </li>
                         <li>
-                            <a href="#!" class="text-dark">О нас</a>
+                            <router-link to="/about" class="text-dark">О нас</router-link>
                         </li>
                         <li>
-                            <a href="#!" class="text-dark">Магазин</a>
+                            <router-link to="/catalog" class="text-dark">Каталог</router-link>
                         </li>
                         <li>
-                            <a href="#!" class="text-dark">Контакты</a>
+                            <router-link to="/contacts" class="text-dark">Контакты</router-link>
                         </li>
                     </ul>
                 </div>
