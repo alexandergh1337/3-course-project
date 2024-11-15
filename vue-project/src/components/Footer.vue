@@ -134,6 +134,14 @@ ul.d-flex {
     justify-content: center;
 }
 
+ul.list-unstyled.d-flex li a img {
+    transition: transform 0.3s ease;
+}
+
+ul.list-unstyled.d-flex li a:hover img {
+    transform: scale(1.1);
+}
+
 @media (min-width: 768px) {
     ul.d-flex {
         justify-content: center;

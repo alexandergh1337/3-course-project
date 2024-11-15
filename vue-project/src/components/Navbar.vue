@@ -32,6 +32,15 @@ export default {
                     <li class="nav-item">
                         <router-link class="nav-link" to="/contacts">Контакты</router-link>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Дополнительно
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><router-link class="dropdown-item" to="/terms">Пользовательское соглашение</router-link></li>
+                            <li><router-link class="dropdown-item" to="/privacy">Политика конфиденциальности</router-link></li>
+                        </ul>
+                    </li>
                 </ul>
                 <ul class="navbar-nav ms-3 social-icons">
                     <li class="nav-item">
@@ -84,6 +93,11 @@ export default {
 .social-icon {
     width: 32px;
     height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -102,4 +116,6 @@ export default {
     font-weight: 700;
     color: #303133;
 }
+
+
 </style>

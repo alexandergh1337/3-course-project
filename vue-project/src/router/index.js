@@ -3,6 +3,8 @@ import Home from '../pages/Home.vue'
 import Contacts from '../pages/Contacts.vue'
 import About from '../pages/About.vue'
 import Catalog from '../pages/Catalog.vue'
+import Terms from '../pages/Terms.vue'
+import Privacy from '../pages/Privacy.vue'
 
 const routes = [
     {
@@ -24,6 +26,16 @@ const routes = [
         path: '/catalog',
         name: 'Catalog',
         component: Catalog
+    },
+    {
+        path: '/terms',
+        name: 'Terms',
+        component: Terms
+    },
+    {
+        path: '/privacy',
+        name: 'Privacy',
+        component: Privacy
     }
 ]
 
