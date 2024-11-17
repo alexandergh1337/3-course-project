@@ -1,6 +1,17 @@
 <script>
 export default {
     name: "Navbar",
+    data() {
+        return {
+            isDarkTheme: false
+        };
+    },
+    methods: {
+        toggleTheme() {
+            this.isDarkTheme = !this.isDarkTheme;
+            document.documentElement.setAttribute('data-theme', this.isDarkTheme ? 'dark' : 'light');
+        }
+    }
 };
 </script>
 
@@ -33,15 +44,21 @@ export default {
                         <router-link class="nav-link" to="/contacts">Контакты</router-link>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Дополнительно
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><router-link class="dropdown-item" to="/terms">Пользовательское соглашение</router-link></li>
-                            <li><router-link class="dropdown-item" to="/privacy">Политика конфиденциальности</router-link></li>
+                            <li><router-link class="dropdown-item" to="/terms">Пользовательское соглашение</router-link>
+                            </li>
+                            <li><router-link class="dropdown-item" to="/privacy">Политика
+                                    конфиденциальности</router-link></li>
                         </ul>
                     </li>
                 </ul>
+                <a @click="toggleTheme" class="ms-3 theme-toggle d-flex align-items-center">
+                    <i :class="isDarkTheme ? 'bi bi-sun' : 'bi bi-moon'"></i>
+                </a>
                 <ul class="navbar-nav ms-3 social-icons">
                     <li class="nav-item">
                         <a href="https://t.me" class="text-dark" aria-label="Telegram">
@@ -71,6 +88,10 @@ export default {
 </template>
 
 <style scoped>
+.navbar {
+    border-bottom: 1px solid var(--navbar-border);
+}
+
 .logo {
     width: 32px;
     height: 32px;
@@ -117,5 +138,13 @@ export default {
     color: #303133;
 }
 
+.theme-toggle {
+    color: #0f0f0f;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
 
+.theme-toggle i {
+    margin-top: -8px;
+}
 </style>

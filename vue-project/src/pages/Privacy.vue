@@ -14,6 +14,7 @@ export default {
 <template>
     <Navbar />
 
+    <section class="privacy-section">
         <div class="container my-5">
             <h1 class="mb-4">Политика в отношении обработки персональных данных</h1>
 
@@ -431,16 +432,26 @@ export default {
 
 
         </div>
+    </section>
 
     <Footer />
 </template>
 
 <style scoped>
-h1 {
-    color: #333;
+.privacy-section {
+    background-color: var(--privacy-bg);
+    color: var(--privacy-text);
+    padding: 4rem 0;
+    margin: 0;
 }
 
-h2 {
+.container {
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+h1, h2 {
+    color: var(--privacy-heading);
     margin-top: 2rem;
     margin-bottom: 2.5rem;
 }
@@ -449,7 +460,7 @@ h2 {
     margin-bottom: 0.5rem;
     padding-left: 60px;
     line-height: 1.5;
-    /* text-indent: -20px; */
+    color: var(--privacy-list-text);
 }
 
 section .list-item {
@@ -466,11 +477,29 @@ section p {
 
 a {
     text-decoration: none;
-    color: #0066cc;
+    color: var(--privacy-link) !important;
 }
 
 a:hover {
     text-decoration: underline;
-    color: #004d99;
+    color: var(--privacy-link-hover) !important;
+}
+
+table {
+    border-color: var(--privacy-table-border) !important;
+}
+
+th {
+    background-color: var(--privacy-table-header);
+    color: var(--privacy-heading);
+    border-color: var(--privacy-table-border) !important;
+}
+
+td {
+    border-color: var(--privacy-table-border) !important;
+}
+
+ul li {
+    color: var(--privacy-text);
 }
 </style>

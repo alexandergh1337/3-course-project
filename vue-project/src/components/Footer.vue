@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <footer class="bg-light text-center text-lg-start mt-5">
+    <footer class="bg-light text-center text-lg-start">
         <div class="container p-4">
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4">
@@ -82,7 +82,7 @@ export default {
             </div>
         </div>
 
-        <div class="text-center p-3">
+        <div class="text-center p-3 copy">
             <p>&copy; 2024 ElectroShop. Все права защищены.</p>
         </div>
     </footer>
@@ -93,15 +93,42 @@ footer {
     position: relative;
     width: 100%;
     bottom: 0;
-    padding: 20px 0;
+    padding: 20px 0 0 0;
+    background-color: var(--footer-bg) !important;
+    color: var(--footer-text);
+    margin: 0;
+    border-top: 1px solid var(--footer-border);
+}
+
+h5 {
+    color: var(--footer-heading);
 }
 
 a {
     text-decoration: none;
+    color: var(--footer-link) !important;
 }
 
 a:hover {
     text-decoration: underline;
+    color: var(--footer-link-hover) !important;
+}
+
+.bi {
+    color: var(--footer-icon);
+}
+
+.copy {
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding: 1rem 0;
+}
+
+.copy p {
+    color: var(--footer-text);
+    border-top: 1px solid var(--footer-border);
+    padding-top: 1rem;
+    margin-bottom: 0;
 }
 
 .txt-soc {

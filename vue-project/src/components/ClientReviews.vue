@@ -61,7 +61,36 @@ export default {
 
 <style scoped>
 .client-reviews-section {
-    background-color: #f8f9fa;
+    background-color: var(--reviews-bg);
+    padding: 4rem 0;
+    margin: 0;
+    border-bottom: 1px solid var(--reviews-card-border);
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background-color: var(--reviews-card-bg);
+    border-color: var(--reviews-card-border);
+}
+
+h2 {
+    color: var(--reviews-title);
+}
+
+.card-title {
+    color: var(--reviews-name);
+}
+
+.card-subtitle {
+    color: var(--reviews-date) !important;
+}
+
+.card-text {
+    color: var(--reviews-text);
 }
 
 .avatar {
@@ -71,10 +100,19 @@ export default {
 }
 
 .rating .bi-star-fill {
-    color: #ffc107;
+    color: var(--star-filled);
 }
 
 .rating .bi-star {
-    color: #ddd;
+    color: var(--star-empty);
+}
+
+.client-reviews-section .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-reviews-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px var(--reviews-hover-shadow);
 }
 </style>

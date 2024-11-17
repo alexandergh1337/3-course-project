@@ -105,7 +105,44 @@ export default {
 </template>
 
 <style scoped>
+.faq-section {
+    background-color: var(--faq-bg);
+    padding: 4rem 0;
+    margin: 0;
+    border-bottom: 1px solid var(--accordion-border);
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
 .faq-section h2 {
     font-weight: 700;
+    color: var(--faq-title);
+}
+
+.accordion-item {
+    background-color: var(--accordion-bg);
+    border-color: var(--accordion-border);
+}
+
+.accordion-button {
+    background-color: var(--accordion-button);
+    color: var(--faq-text);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--accordion-button-active);
+    color: var(--faq-text);
+}
+
+.accordion-button::after {
+    filter: var(--icon-filter);
+}
+
+.accordion-body {
+    color: var(--faq-text);
+    background-color: var(--accordion-bg);
 }
 </style>

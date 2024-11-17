@@ -14,10 +14,7 @@ export default {
 <template>
     <Navbar />
 
-    <div>
-        <h1>Каталог</h1>
-        <p>Здесь будет информация о каталоге.</p>
-    </div>
+
 
     <Footer />
 </template>

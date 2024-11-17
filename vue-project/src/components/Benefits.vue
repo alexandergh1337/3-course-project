@@ -29,12 +29,23 @@ export default {
     </section>
 </template>
 
+
 <style scoped>
-/* .benefits-section {
-    background-color: #f8f9fa;
-} */
+.benefits-section {
+    background-color: var(--benefits-bg);
+    border-bottom: 1px solid var(--benefits-border);
+}
+
+.benefits-section h2 {
+    color: var(--benefits-title);
+}
+
+.benefits-section h5,
+.benefits-section p {
+    color: var(--benefits-text);
+}
 
 .benefits-section i {
-    color: #007bff;
+    color: var(--benefits-icon);
 }
 </style>

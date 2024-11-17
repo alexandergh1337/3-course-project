@@ -1,0 +1,271 @@
+:root {
+    /* Светлая тема (по умолчанию) */
+    --background-primary: #ffffff;
+    --background-secondary: #f5f5f5;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --accent-color: #0066cc;
+    --border-color: #e0e0e0;
+
+    /* Навбар светлая тема */
+    --navbar-bg: #ffffff;
+    --navbar-text: #333333;
+    --navbar-link: #0f0f0f;
+    --navbar-link-hover: #0066cc;
+    --navbar-active: #303133;
+    --dropdown-bg: #ffffff;
+    --dropdown-hover: #f8f9fa;
+    --theme-toggle-color: #0f0f0f;
+    --navbar-border: #dee2e6;
+
+
+    /* Benefits секция светлая тема */
+    --benefits-bg: #ffffff;
+    --benefits-text: #333333;
+    --benefits-icon: #007bff;
+    --benefits-title: #222222;
+    --benefits-border: #dee2e6;
+
+    /* Popular Products секция светлая тема */
+    --products-section-bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --card-border: #dee2e6;
+    --card-title: #333333;
+    --card-text: #666666;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+
+    /* FAQ секция светлая тема */
+    --faq-bg: #ffffff;
+    --faq-text: #333333;
+    --faq-title: #222222;
+    --accordion-bg: #ffffff;
+    --accordion-border: #dee2e6;
+    --accordion-button: #f8f9fa;
+    --accordion-button-active: #e7f1ff;
+
+    /* Reviews секция светлая тема */
+    --reviews-bg: #f8f9fa;
+    --reviews-card-bg: #ffffff;
+    --reviews-card-border: #dee2e6;
+    --reviews-title: #333333;
+    --reviews-text: #666666;
+    --reviews-name: #333333;
+    --reviews-date: #6c757d;
+    --star-filled: #ffc107;
+    --star-empty: #dddddd;
+    --reviews-hover-shadow: rgba(0, 0, 0, 0.15);
+
+    /* Contact Form светлая тема */
+    --form-bg: #ffffff;
+    --form-title: #333333;
+    --form-label: #666666;
+    --input-bg: #ffffff;
+    --input-text: #333333;
+    --input-border: #ced4da;
+    --input-focus-border: #80bdff;
+    --input-focus-shadow: rgba(0, 123, 255, 0.25);
+    --button-bg: #0066cc;
+    --button-text: #ffffff;
+    --button-hover-bg: #0056b3;
+    --alert-success-bg: #d4edda;
+    --alert-success-text: #155724;
+    --alert-success-border: #c3e6cb;
+    --input-placeholder: #6c757d;
+
+    /* Footer светлая тема */
+    --footer-bg: #f8f9fa;
+    --footer-text: #333333;
+    --footer-link: #333333;
+    --footer-link-hover: #0066cc;
+    --footer-heading: #222222;
+    --footer-border: #dee2e6;
+    --footer-icon: #666666;
+
+    /* About страница светлая тема */
+    --about-bg: #ffffff;
+    --about-text: #333333;
+    --about-heading: #222222;
+    --about-image-shadow: rgba(0, 0, 0, 0.1);
+
+    /* Contacts страница светлая тема */
+    --contacts-bg: #ffffff;
+    --contacts-text: #333333;
+    --contacts-heading: #222222;
+    --contacts-link: #0066cc;
+    --contacts-link-hover: #004c99;
+    --contacts-image-shadow: rgba(0, 0, 0, 0.1);
+
+    /* Privacy страница светлая тема */
+    --privacy-bg: #ffffff;
+    --privacy-text: #333333;
+    --privacy-heading: #222222;
+    --privacy-link: #0066cc;
+    --privacy-link-hover: #004d99;
+    --privacy-table-border: #dee2e6;
+    --privacy-table-header: #f8f9fa;
+    --privacy-list-text: #666666;
+
+    /* Terms страница светлая тема */
+    --terms-bg: #ffffff;
+    --terms-text: #333333;
+    --terms-heading: #222222;
+    --terms-link: #0066cc;
+    --terms-link-hover: #004d99;
+    --terms-list-text: #666666;
+    --terms-strong: #222222;
+
+}
+
+[data-theme="dark"] {
+    /* Темная тема */
+    --background-primary: #1a1a1a;
+    --background-secondary: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --accent-color: #66b3ff;
+    --border-color: #404040;
+
+    /* Навбар темная тема */
+    --navbar-bg: #2d2d2d;
+    --navbar-text: #ffffff;
+    --navbar-link: #ffffff;
+    --navbar-link-hover: #66b3ff;
+    --navbar-active: #ffffff;
+    --dropdown-bg: #1a1a1a;
+    --dropdown-hover: #3d3d3d;
+    --theme-toggle-color: #ffffff;
+    --navbar-border: #404040;
+
+    /* Benefits секция темная тема */
+    --benefits-bg: #2d2d2d;
+    --benefits-text: #ffffff;
+    --benefits-icon: #66b3ff;
+    --benefits-title: #ffffff;
+    --benefits-border: #404040;
+
+    /* Popular Products секция темная тема */
+    --products-section-bg: #2d2d2d;
+    --card-bg: #1a1a1a;
+    --card-border: #404040;
+    --card-title: #ffffff;
+    --card-text: #b3b3b3;
+    --card-shadow: rgba(255, 255, 255, 0.1);
+
+    /* FAQ секция темная тема */
+    --faq-bg: #2d2d2d;
+    --faq-text: #ffffff;
+    --faq-title: #ffffff;
+    --accordion-bg: #1a1a1a;
+    --accordion-border: #404040;
+    --accordion-button: #333333;
+    --accordion-button-active: #404040;
+
+    /* Reviews секция темная тема */
+    --reviews-bg: #2d2d2d;
+    --reviews-card-bg: #1a1a1a;
+    --reviews-card-border: #404040;
+    --reviews-title: #ffffff;
+    --reviews-text: #b3b3b3;
+    --reviews-name: #ffffff;
+    --reviews-date: #999999;
+    --star-filled: #ffd700;
+    --star-empty: #666666;
+    --reviews-hover-shadow: rgba(255, 255, 255, 0.15);
+
+    /* Contact Form темная тема */
+    --form-bg: #2d2d2d;
+    --form-title: #ffffff;
+    --form-label: #b3b3b3;
+    --input-bg: #1a1a1a;
+    --input-text: #ffffff;
+    --input-border: #404040;
+    --input-focus-border: #66b3ff;
+    --input-focus-shadow: rgba(102, 179, 255, 0.25);
+    --button-bg: #66b3ff;
+    --button-text: #ffffff;
+    --button-hover-bg: #3399ff;
+    --alert-success-bg: #1e4a2e;
+    --alert-success-text: #98c9a3;
+    --alert-success-border: #2d5a3f;
+    --input-placeholder: #666666;
+
+    /* Footer темная тема */
+    --footer-bg: #2d2d2d;
+    --footer-text: #ffffff;
+    --footer-link: #b3b3b3;
+    --footer-link-hover: #66b3ff;
+    --footer-heading: #ffffff;
+    --footer-border: #404040;
+    --footer-icon: #b3b3b3;
+
+    /* About страница темная тема */
+    --about-bg: #2d2d2d;
+    --about-text: #b3b3b3;
+    --about-heading: #ffffff;
+    --about-image-shadow: rgba(255, 255, 255, 0.1);
+
+    /* Contacts страница темная тема */
+    --contacts-bg: #2d2d2d;
+    --contacts-text: #b3b3b3;
+    --contacts-heading: #ffffff;
+    --contacts-link: #66b3ff;
+    --contacts-link-hover: #99ccff;
+    --contacts-image-shadow: rgba(255, 255, 255, 0.1);
+
+    /* Privacy страница темная тема */
+    --privacy-bg: #2d2d2d;
+    --privacy-text: #b3b3b3;
+    --privacy-heading: #ffffff;
+    --privacy-link: #66b3ff;
+    --privacy-link-hover: #99ccff;
+    --privacy-table-border: #404040;
+    --privacy-table-header: #1a1a1a;
+    --privacy-list-text: #999999;
+
+    /* Terms страница темная тема */
+    --terms-bg: #2d2d2d;
+    --terms-text: #b3b3b3;
+    --terms-heading: #ffffff;
+    --terms-link: #66b3ff;
+    --terms-link-hover: #99ccff;
+    --terms-list-text: #999999;
+    --terms-strong: #ffffff;
+
+}
+
+/* Применение переменных к навбару */
+.navbar {
+    background-color: var(--navbar-bg) !important;
+    color: var(--navbar-text);
+}
+
+.navbar-brand,
+.nav-link {
+    color: var(--navbar-link) !important;
+}
+
+.nav-link:hover {
+    color: var(--navbar-link-hover) !important;
+}
+
+.router-link-active {
+    color: var(--navbar-active) !important;
+}
+
+.dropdown-menu {
+    background-color: var(--dropdown-bg);
+    border-color: var(--border-color);
+}
+
+.dropdown-item {
+    color: var(--navbar-text);
+}
+
+.dropdown-item:hover {
+    background-color: var(--dropdown-hover);
+    color: var(--navbar-text);
+}
+
+.theme-toggle {
+    color: var(--theme-toggle-color) !important;
+}

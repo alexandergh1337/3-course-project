@@ -25,8 +25,6 @@ export default {
 
 <template>
 
-  <router-view  />
-
   <Navbar />
 
   <Carousel />

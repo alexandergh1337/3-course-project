@@ -41,13 +41,29 @@ export default {
 
 <style scoped>
 .popular-products-section {
-    background-color: #f8f9fa;
+    background-color: var(--products-section-bg);
+    padding: 4rem 0;
+    margin: 0;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px var(--card-shadow);
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card-img-top {
@@ -57,5 +73,17 @@ export default {
 
 .card-body {
     padding: 15px;
+}
+
+.card-title {
+    color: var(--card-title);
+}
+
+.card-text {
+    color: var(--card-text);
+}
+
+h2 {
+    color: var(--card-title);
 }
 </style>
