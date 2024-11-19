@@ -58,6 +58,8 @@ export default {
 .contacts-section {
     background-color: var(--contacts-bg);
     padding: 2rem;
+    /* margin-bottom: 2rem; */
+    border-bottom: 3rem solid var(--background-secondary);
     /* border-radius: 8px; */
 }
 

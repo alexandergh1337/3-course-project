@@ -52,6 +52,8 @@ export default {
 .about-section {
     background-color: var(--about-bg);
     padding: 2rem;
+    /* margin-bottom: 2rem; */
+    border-bottom: 3rem solid var(--background-secondary);
     /* border-radius: 8px; */
 }
 

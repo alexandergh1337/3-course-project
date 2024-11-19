@@ -8,7 +8,7 @@
     --border-color: #e0e0e0;
 
     /* Навбар светлая тема */
-    --navbar-bg: #ffffff;
+    --navbar-bg: #f8f9fa;
     --navbar-text: #333333;
     --navbar-link: #0f0f0f;
     --navbar-link-hover: #0066cc;
@@ -126,7 +126,7 @@
     --border-color: #404040;
 
     /* Навбар темная тема */
-    --navbar-bg: #2d2d2d;
+    --navbar-bg: #1c1c1c;
     --navbar-text: #ffffff;
     --navbar-link: #ffffff;
     --navbar-link-hover: #66b3ff;
@@ -144,7 +144,7 @@
     --benefits-border: #404040;
 
     /* Popular Products секция темная тема */
-    --products-section-bg: #2d2d2d;
+    --products-section-bg: #1c1c1c;
     --card-bg: #1a1a1a;
     --card-border: #404040;
     --card-title: #ffffff;
@@ -161,7 +161,7 @@
     --accordion-button-active: #404040;
 
     /* Reviews секция темная тема */
-    --reviews-bg: #2d2d2d;
+    --reviews-bg: #1c1c1c;
     --reviews-card-bg: #1a1a1a;
     --reviews-card-border: #404040;
     --reviews-title: #ffffff;
@@ -190,7 +190,7 @@
     --input-placeholder: #666666;
 
     /* Footer темная тема */
-    --footer-bg: #2d2d2d;
+    --footer-bg: #1c1c1c;
     --footer-text: #ffffff;
     --footer-link: #b3b3b3;
     --footer-link-hover: #66b3ff;
@@ -269,3 +269,4 @@
 .theme-toggle {
     color: var(--theme-toggle-color) !important;
 }
+
