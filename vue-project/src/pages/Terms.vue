@@ -124,7 +124,7 @@ export default {
 .terms-section {
     background-color: var(--terms-bg);
     color: var(--terms-text);
-    padding: 4rem 0;
+    padding: 2rem 0;
     margin: 0;
 }
 

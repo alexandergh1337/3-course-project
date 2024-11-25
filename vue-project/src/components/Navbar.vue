@@ -3,14 +3,20 @@ export default {
     name: "Navbar",
     data() {
         return {
-            isDarkTheme: false
+            isDarkTheme: localStorage.getItem('theme') === 'dark'
         };
     },
     methods: {
         toggleTheme() {
             this.isDarkTheme = !this.isDarkTheme;
-            document.documentElement.setAttribute('data-theme', this.isDarkTheme ? 'dark' : 'light');
+            const theme = this.isDarkTheme ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
         }
+    },
+    mounted() {
+        const theme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
     }
 };
 </script>

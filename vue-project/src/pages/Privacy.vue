@@ -441,7 +441,7 @@ export default {
 .privacy-section {
     background-color: var(--privacy-bg);
     color: var(--privacy-text);
-    padding: 4rem 0;
+    padding: 2rem 0;
     margin: 0;
 }
 
