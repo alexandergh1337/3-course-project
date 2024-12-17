@@ -53,7 +53,7 @@ export default {
     background-color: var(--about-bg);
     padding: 2rem;
     /* margin-bottom: 2rem; */
-    border-bottom: 3rem solid var(--background-secondary);
+    border-bottom: 3rem solid transparent;
     /* border-radius: 8px; */
 }
 
