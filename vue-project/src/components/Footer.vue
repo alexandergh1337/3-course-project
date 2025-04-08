@@ -6,15 +6,15 @@ export default {
 
 <template>
     <footer class="bg-light text-center text-lg-start">
-        <div class="container p-4">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">
+        <article class="container p-4">
+            <article class="row">
+                <article class="col-lg-3 col-md-6 mb-4">
                     <h5 class="text-uppercase">О нас</h5>
                     <p>ElectroShop — это ваш надежный партнер в области электроники и техники. Мы предлагаем
                         качественные товары по доступным ценам.</p>
-                </div>
+                </article>
 
-                <div class="col-lg-3 col-md-6 mb-4">
+                <article class="col-lg-3 col-md-6 mb-4">
                     <h5 class="text-uppercase">Контакты</h5>
                     <ul class="list-unstyled">
                         <li>
@@ -33,9 +33,9 @@ export default {
                             <a href="mailto:support@electroshop.com" class="text-dark">support@electroshop.com</a>
                         </li>
                     </ul>
-                </div>
+                </article>
 
-                <div class="col-lg-3 col-md-12 mb-4">
+                <article class="col-lg-3 col-md-12 mb-4">
                     <h5 class="text-uppercase">Навигация</h5>
                     <ul class="list-unstyled mb-0">
                         <li>
@@ -51,9 +51,9 @@ export default {
                             <router-link to="/contacts" class="text-dark">Контакты</router-link>
                         </li>
                     </ul>
-                </div>
+                </article>
 
-                <div class="col-lg-3 col-md-12 mb-4">
+                <article class="col-lg-3 col-md-12 mb-4">
                     <h5 class="txt-soc text-uppercase">Мы в соцсетях</h5>
                     <ul class="list-unstyled d-flex">
                         <li class="me-3">
@@ -78,13 +78,13 @@ export default {
                             </a>
                         </li>
                     </ul>
-                </div>
-            </div>
-        </div>
+                </article>
+            </article>
+        </article>
 
-        <div class="text-center p-3 copy">
+        <article class="text-center p-3 copy">
             <p>&copy; 2024 ElectroShop. Все права защищены.</p>
-        </div>
+        </article>
     </footer>
 </template>
 

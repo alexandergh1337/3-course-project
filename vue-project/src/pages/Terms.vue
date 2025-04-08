@@ -1,4 +1,4 @@
-<script>
+article<script>
 import Navbar from "../components/Navbar.vue";
 import Footer from "../components/Footer.vue";
 
@@ -15,7 +15,7 @@ export default {
     <Navbar />
 
     <section class="terms-section">
-        <div class="container my-5">
+        <article class="container my-5">
             <h1 class="mb-4">Пользовательское соглашение</h1>
 
             <section>
@@ -41,30 +41,30 @@ export default {
 
             <section>
                 <h2>3. Права и обязанности сторон</h2>
-                <div class="list-item">
+                <article class="list-item">
                     <p>3.1. <strong>Пользователь имеет право:</strong></p>
                     <p>— осуществлять поиск информации на сайте;</p>
                     <p>— получать информацию на сайте;</p>
                     <p>— использовать информацию сайта в личных некоммерческих целях.</p>
-                </div>
-                <div class="list-item">
+                </article>
+                <article class="list-item">
                     <p>3.2. <strong>Администрация имеет право:</strong></p>
                     <p>— по своему усмотрению и необходимости создавать, изменять, отменять правила;</p>
                     <p>— ограничивать доступ к любой информации на сайте.</p>
-                </div>
-                <div class="list-item">
+                </article>
+                <article class="list-item">
                     <p>3.3. <strong>Пользователь обязуется:</strong></p>
                     <p>— не нарушать работоспособность сайта;</p>
                     <p>— не использовать скрипты (программы) для автоматизированного сбора информации и/или
                         взаимодействия с
                         Сайтом и его Сервисами.</p>
-                </div>
-                <div class="list-item">
+                </article>
+                <article class="list-item">
                     <p>3.4. <strong>Администрация обязуется:</strong></p>
                     <p>— поддерживать работоспособность сайта за исключением случаев, когда это невозможно по
                         независящим от
                         Администрации причинам.</p>
-                </div>
+                </article>
             </section>
 
             <section>
@@ -75,14 +75,14 @@ export default {
 
             <section>
                 <h2>5. Ответственность сторон</h2>
-                <div class="list-item">
+                <article class="list-item">
                     <p>— администрация не несет никакой ответственности за услуги, предоставляемые третьими лицами;</p>
                     <p>— в случае возникновения форс-мажорной ситуации (боевые действия, чрезвычайное положение,
                         стихийное
                         бедствие и т. д.) Администрация не гарантирует сохранность информации, размещённой
                         Пользователем, а
                         также бесперебойную работу информационного ресурса.</p>
-                </div>
+                </article>
             </section>
 
             <section>
@@ -114,7 +114,7 @@ export default {
                         target="_blank">Правилль</a></p>
             </section>
 
-        </div>
+        </article>
     </section>
 
     <Footer />

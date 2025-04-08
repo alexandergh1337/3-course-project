@@ -1,4 +1,4 @@
-<script>
+article<script>
 import { gsap } from "gsap";
 
 export default {
@@ -58,31 +58,31 @@ export default {
 
 <template>
     <section class="contact-section">
-        <div class="container">
+        <article class="container">
             <h2>Свяжитесь с нами</h2>
             <form @submit.prevent="handleSubmit">
-                <div class="mb-3">
+                <article class="mb-3">
                     <label for="name" class="form-label">Ваше имя</label>
                     <input type="text" class="form-control" v-model="name" placeholder="Введите ваше имя" required>
-                </div>
-                <div class="mb-3">
+                </article>
+                <article class="mb-3">
                     <label for="email" class="form-label">Email</label>
                     <input type="email" class="form-control" v-model="email" placeholder="Введите ваш email" required>
-                </div>
-                <div class="mb-3">
+                </article>
+                <article class="mb-3">
                     <label for="message" class="form-label">Сообщение</label>
                     <textarea class="form-control" v-model="message" rows="3" placeholder="Введите ваше сообщение"
                         required></textarea>
-                </div>
+                </article>
                 <button type="submit" class="btn btn-primary">Отправить</button>
             </form>
 
-            <div v-if="showAlert" class="alert alert-success alert-dismissible custom-alert" role="alert"
+            <article v-if="showAlert" class="alert alert-success alert-dismissible custom-alert" role="alert"
                 @mouseover="pauseAlert" @mouseleave="resumeAlert">
                 <strong>Успех!</strong> Ваше сообщение отправлено.
                 <button type="button" class="btn-close" @click="closeAlert" aria-label="Close"></button>
-            </div>
-        </div>
+            </article>
+        </article>
     </section>
 </template>
 

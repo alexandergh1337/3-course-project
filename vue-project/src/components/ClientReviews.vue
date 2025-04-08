@@ -33,29 +33,29 @@ export default {
 
 <template>
     <section class="client-reviews-section py-5">
-        <div class="container">
+        <article class="container">
             <h2 class="text-center mb-4">Отзывы наших клиентов</h2>
-            <div class="row">
-                <div class="col-md-4" v-for="(review, index) in reviews" :key="index">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
+            <article class="row">
+                <article class="col-md-4" v-for="(review, index) in reviews" :key="index">
+                    <article class="card mb-4">
+                        <article class="card-body">
+                            <article class="d-flex align-items-center mb-3">
                                 <img :src="review.avatar" alt="avatar" class="avatar me-3">
-                                <div>
+                                <article>
                                     <h5 class="card-title mb-0">{{ review.name }}</h5>
                                     <h6 class="card-subtitle text-muted mt-1">{{ review.date }}</h6>
-                                </div>
-                            </div>
+                                </article>
+                            </article>
                             <p class="card-text">{{ review.text }}</p>
-                            <div class="rating">
+                            <article class="rating">
                                 <span v-for="star in 5" :key="star" class="bi"
                                     :class="star <= review.rating ? 'bi-star-fill' : 'bi-star'"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                            </article>
+                        </article>
+                    </article>
+                </article>
+            </article>
+        </article>
     </section>
 </template>
 

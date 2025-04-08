@@ -23,10 +23,13 @@ export default {
 
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+        <article class="container-fluid">
             <router-link class="navbar-brand d-flex align-items-center" to="/">
-                <img class="logo"
+                <!-- <img class="logo"
                     src="https://cdn-icons-png.freepik.com/256/6572/6572765.png?ga=GA1.1.311673308.1729616116&semt=ais_hybrid"
+                    alt="light"> -->
+                <img class="logo"
+                    src="/src/assets/svg/logo.svg"
                     alt="light">
                 <span class="brand-name ms-2">ElectroShop</span>
             </router-link>
@@ -35,7 +38,7 @@ export default {
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <article class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <router-link class="nav-link" to="/">Главная</router-link>
@@ -88,8 +91,8 @@ export default {
                         </a>
                     </li>
                 </ul>
-            </div>
-        </div>
+            </article>
+        </article>
     </nav>
 </template>
 

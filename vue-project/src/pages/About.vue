@@ -1,4 +1,4 @@
-<script>
+article<script>
 import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
 import { gsap } from 'gsap';
@@ -20,15 +20,15 @@ export default {
     <Navbar />
 
     <section class="about-section">
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="about-image">
+        <article class="container mt-5">
+            <article class="row">
+                <article class="col-md-6">
+                    <article class="about-image">
                         <img src="/src/assets/img/990.jpg" class="img-fluid rounded" alt="О нас">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="about-text">
+                    </article>
+                </article>
+                <article class="col-md-6">
+                    <article class="about-text">
                         <h1>О нас</h1>
                         <p>Добро пожаловать в наш магазин электроники и техники! Мы предлагаем широкий ассортимент
                             товаров от ведущих производителей. Наша цель - предоставить вам лучшие продукты по доступным
@@ -38,10 +38,10 @@ export default {
                             вопросы.</p>
                         <p>Спасибо, что выбрали нас! Мы ценим ваше доверие и надеемся на долгосрочное сотрудничество.
                         </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    </article>
+                </article>
+            </article>
+        </article>
     </section>
 
     <Footer />

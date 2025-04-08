@@ -1,4 +1,4 @@
-<script>
+article<script>
 export default {
     name: 'PopularProducts',
     data() {
@@ -19,23 +19,23 @@ export default {
 
 <template>
     <section class="popular-products-section py-5">
-        <div class="container">
+        <article class="container">
             <h2 class="text-center mb-4">Популярные товары</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4" v-for="product in products" :key="product.id">
-                    <div class="card h-100">
+            <article class="row">
+                <article class="col-md-4 mb-4" v-for="product in products" :key="product.id">
+                    <article class="card h-100">
                         <img :src="product.image" class="card-img-top" :alt="product.name">
-                        <div class="card-body text-center">
+                        <article class="card-body text-center">
                             <h5 class="card-title">{{ product.name }}</h5>
                             <p class="card-text">{{ product.price }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-4">
+                        </article>
+                    </article>
+                </article>
+            </article>
+            <article class="text-center mt-4">
                 <router-link to="/catalog" class="btn btn-primary">Перейти в каталог</router-link>
-            </div>
-        </div>
+            </article>
+        </article>
     </section>
 </template>
 
