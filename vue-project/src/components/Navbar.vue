@@ -31,7 +31,7 @@ export default {
                 <img class="logo"
                     src="/src/assets/svg/logo.svg"
                     alt="light">
-                <span class="brand-name ms-2">ElectroShop</span>
+                <span class="brand-name ms-2"><strong>Electro</strong>Shop</span>
             </router-link>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -108,7 +108,6 @@ export default {
 
 .brand-name {
     font-size: 1.25rem;
-    font-weight: bold;
 }
 
 .navbar-nav img {
@@ -142,7 +141,7 @@ export default {
     }
 }
 
-.router-link-active {
+.nav-item .router-link-active  {
     font-weight: 700;
     color: #303133;
 }
