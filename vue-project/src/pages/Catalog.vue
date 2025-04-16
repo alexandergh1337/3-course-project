@@ -305,9 +305,9 @@ export default {
     <article v-if="showToast" class="custom-toast" :class="toastClass" 
         @mouseover="pauseToast" @mouseleave="resumeToast">
         <article class="toast-body">
-            <div>
+            <article>
                 <strong>{{ toastMessage.productName }}</strong> {{ toastMessage.action }}
-            </div>
+            </article>
             <button type="button" class="btn-close ms-2" @click="closeToast" aria-label="Закрыть"></button>
         </article>
     </article>

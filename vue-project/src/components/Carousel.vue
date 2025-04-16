@@ -18,7 +18,7 @@ export default {
                 <img src="/src/assets/img/2149552421.jpg"
                     class="d-block w-100" alt="Товар 1">
                 <article class="carousel-caption d-none d-md-block">
-                    <h5>Лучшие устройства 2024</h5>
+                    <h5>Лучшие устройства</h5>
                     <p>Откройте для себя новейшие технологии и гаджеты в нашем каталоге.</p>
                 </article>
             </article>

@@ -83,7 +83,7 @@ export default {
         </article>
 
         <article class="text-center p-3 copy">
-            <p>&copy; 2024 ElectroShop. Все права защищены.</p>
+            <p>&copy; 2025 ElectroShop. Все права защищены.</p>
         </article>
     </footer>
 </template>

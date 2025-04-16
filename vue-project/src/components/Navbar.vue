@@ -65,9 +65,19 @@ export default {
                         </ul>
                     </li>
                 </ul>
+                <li class="nav-item list-unstyled ms-3 d-flex align-items-center profile">
+                    <router-link to="/profile" class="nav-link" aria-label="Профиль">
+                        <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
+                    </router-link>
+                </li>
                 <a @click="toggleTheme" class="ms-3 theme-toggle d-flex align-items-center">
                     <i :class="isDarkTheme ? 'bi bi-sun' : 'bi bi-moon'"></i>
                 </a>
+                <li class="nav-item list-unstyled ms-3 d-flex align-items-center profile">
+                    <router-link to="/cart" class="nav-link" aria-label="Корзина">
+                        <i class="bi bi-cart-fill" style="font-size: 1.5rem;"></i>
+                    </router-link>
+                </li>
                 <ul class="navbar-nav ms-3 social-icons">
                     <li class="nav-item">
                         <a href="https://t.me" class="text-dark" aria-label="Telegram">
@@ -153,6 +163,10 @@ export default {
 }
 
 .theme-toggle i {
+    margin-top: -8px;
+}
+
+.profile {
     margin-top: -8px;
 }
 </style>

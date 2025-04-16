@@ -134,6 +134,31 @@
     --catalog-toast-text: #ffffff;
     --catalog-toast-shadow: rgba(0, 0, 0, 0.15);
 
+    /* Cart страница светлая тема */
+    --cart-bg: #ffffff;
+    --cart-title: #333333;
+    --cart-table-header: #f8f9fa;
+    --cart-table-border: #dee2e6;
+    --cart-table-text: #333333;
+    --cart-total-text: #222222;
+    --cart-empty-text: #666666;
+    --cart-action-btn-bg: #ffc107;
+    --cart-action-btn-text: #ffffff;
+    --cart-action-btn-hover-bg: #e0a800;
+
+    /* Profile страница светлая тема */
+    --profile-bg: #ffffff;
+    --profile-title: #222222;
+    --profile-section-bg: #f8f9fa;
+    --profile-section-border: #dee2e6;
+    --profile-section-text: #333333;
+    --profile-table-header: #f8f9fa;
+    --profile-table-border: #dee2e6;
+    --profile-table-text: #333333;
+    --profile-toast-bg: #dc3545;
+    --profile-toast-border: #c82333;
+    --profile-toast-text: #ffffff;
+
 }
 
 [data-theme="dark"] {
@@ -270,6 +295,31 @@
     --catalog-toast-favorite-border: #a50d0d;
     --catalog-toast-text: #ffffff;
     --catalog-toast-shadow: rgba(255, 255, 255, 0.15);
+
+    /* Cart страница темная тема */
+    --cart-bg: #2d2d2d;
+    --cart-title: #ffffff;
+    --cart-table-header: #1a1a1a;
+    --cart-table-border: #404040;
+    --cart-table-text: #b3b3b3;
+    --cart-total-text: #ffffff;
+    --cart-empty-text: #b3b3b3;
+    --cart-action-btn-bg: #ffc107;
+    --cart-action-btn-text: #222222;
+    --cart-action-btn-hover-bg: #e0a800;
+
+    /* Profile страница темная тема */
+    --profile-bg: #1a1a1a;
+    --profile-title: #ffffff;
+    --profile-section-bg: #2d2d2d;
+    --profile-section-border: #404040;
+    --profile-section-text: #b3b3b3;
+    --profile-table-header: #1a1a1a;
+    --profile-table-border: #404040;
+    --profile-table-text: #b3b3b3;
+    --profile-toast-bg: #b71c1c;
+    --profile-toast-border: #a50d0d;
+    --profile-toast-text: #ffffff;
 }
 
 /* Применение переменных к навбару */

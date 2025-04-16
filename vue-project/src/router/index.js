@@ -5,6 +5,8 @@ import About from '../pages/About.vue'
 import Catalog from '../pages/Catalog.vue'
 import Terms from '../pages/Terms.vue'
 import Privacy from '../pages/Privacy.vue'
+import Profile from '../pages/Profile.vue'
+import Cart from '../pages/Cart.vue'
 
 const routes = [
     {
@@ -36,7 +38,17 @@ const routes = [
         path: '/privacy',
         name: 'Privacy',
         component: Privacy
-    }
+    },
+    {
+        path: '/profile',
+        name: 'Profile',
+        component: Profile
+    },
+    {
+        path: '/Cart',
+        name: 'Cart',
+        component: Cart
+    },
 ]
 
 const router = createRouter({
