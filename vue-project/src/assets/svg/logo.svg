@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.74 35.74">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_Безымянный_градиент_17);
+      }
+
+      .cls-2 {
+        fill: url(#_Безымянный_градиент_17-2);
+      }
+
+      .cls-3 {
+        fill: url(#_Безымянный_градиент_28);
+      }
+    </style>
+    <linearGradient id="_Безымянный_градиент_17" data-name="Безымянный градиент 17" x1="-1.16" y1="23.66" x2="23.35" y2=".8" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5a26bb"/>
+      <stop offset="0" stop-color="#5a26bb"/>
+      <stop offset="0" stop-color="#5a26bb"/>
+      <stop offset="0" stop-color="#5a26bb"/>
+      <stop offset="0" stop-color="#5a26bb"/>
+      <stop offset="0" stop-color="#5a26bb"/>
+      <stop offset="1" stop-color="#298cf4"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_17-2" data-name="Безымянный градиент 17" x1="10.82" y1="34.77" x2="36.09" y2="11.21" xlink:href="#_Безымянный_градиент_17"/>
+    <linearGradient id="_Безымянный_градиент_28" data-name="Безымянный градиент 28" x1="378.25" y1="133.35" x2="391.17" y2="124.48" gradientTransform="translate(-351.75 -152.15) rotate(6.13)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e83a91"/>
+      <stop offset="0" stop-color="#5a26bb"/>
+      <stop offset="0" stop-color="#5a26bb"/>
+      <stop offset="0" stop-color="#5a26bb"/>
+      <stop offset="0" stop-color="#5a26bb"/>
+      <stop offset="0" stop-color="#7129b3"/>
+      <stop offset="0" stop-color="#912daa"/>
+      <stop offset="0" stop-color="#ac31a2"/>
+      <stop offset="0" stop-color="#c2349c"/>
+      <stop offset="0" stop-color="#d33797"/>
+      <stop offset="0" stop-color="#df3893"/>
+      <stop offset="0" stop-color="#e63991"/>
+      <stop offset="0" stop-color="#e83a91"/>
+      <stop offset="1" stop-color="#f4ed23"/>
+    </linearGradient>
+  </defs>
+  <g id="_Слой_2-2" data-name="Слой 2">
+    <g>
+      <path class="cls-1" d="M5.06,30.33C1.8,26.98,0,22.55,0,17.87S1.86,8.61,5.23,5.23C8.61,1.86,13.1,0,17.87,0c1.51,0,3.01.19,4.45.56.36.09.74.2,1.11.32l-.91,2.77c-.31-.1-.63-.19-.93-.27-1.21-.31-2.46-.47-3.73-.47-8.24,0-14.95,6.71-14.95,14.95,0,3.92,1.5,7.62,4.24,10.43l-2.09,2.03Z"/>
+      <path class="cls-2" d="M17.87,35.74c-2.74,0-5.38-.61-7.83-1.8l1.28-2.62c2.05,1,4.25,1.51,6.55,1.51,8.24,0,14.95-6.71,14.95-14.95,0-4.62-2.08-8.9-5.72-11.76l1.8-2.29c4.34,3.41,6.83,8.54,6.83,14.05,0,9.85-8.02,17.87-17.87,17.87Z"/>
+      <polygon class="cls-3" points="26.6 2.15 6.7 19.58 16.37 17.4 6.81 32.34 25.63 18.97 16.89 21.19 24.81 12.25 17.78 14.13 26.6 2.15"/>
+    </g>
+  </g>
+</svg>
