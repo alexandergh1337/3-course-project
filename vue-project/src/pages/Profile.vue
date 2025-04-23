@@ -2,7 +2,7 @@
 import Navbar from "../components/Navbar.vue";
 import Footer from "../components/Footer.vue";
 import { gsap } from "gsap";
-import { getUser, logout } from '@/api/auth';
+import { getUser, logout, updateUser } from '@/api/auth';
 
 export default {
     name: 'Profile',
@@ -131,6 +131,26 @@ export default {
         async handleLogout() {
             await logout();
             this.$router.push('/login');
+        },
+        async handleProfileUpdate() {
+            try {
+                await updateUser({
+                    name: this.personalName,
+                    email: this.personalEmail,
+                    phone: this.personalPhone
+                });
+                this.toastMessage = { productName: '', action: 'Данные успешно обновлены' };
+                this.showToast = true;
+                this.toastStartTime = Date.now();
+                this.toastElapsed = 0;
+                clearTimeout(this.toastTimeout);
+                this.setToastTimeout();
+                this.$nextTick(() => {
+                    gsap.fromTo(".custom-toast", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.5 });
+                });
+            } catch (e) {
+                alert('Ошибка при обновлении профиля: ' + (e.message || ''));
+            }
         }
     }
 }
@@ -166,10 +186,18 @@ export default {
                         <input type="tel" class="form-control" id="profilePhone" v-model="personalPhone">
                     </article>
                     <article class="col-md-2 d-flex align-items-end mt-5">
-                        <button type="button" class="btn btn-outline-primary w-100">Изменить</button>
+                        <button type="button" class="btn btn-outline-primary w-100"
+                            @click="handleProfileUpdate">Изменить</button>
                     </article>
                 </form>
                 <button class="btn btn-danger mt-4" @click="handleLogout">Выйти</button>
+                <article v-if="showToast" class="custom-toast toast-info" @mouseover="pauseToast"
+                    @mouseleave="resumeToast">
+                    <article class="toast-body">
+                        <span>{{ toastMessage.action }}</span>
+                        <button type="button" class="btn-close ms-2" @click="closeToast" aria-label="Закрыть"></button>
+                    </article>
+                </article>
             </section>
             <section v-else-if="tab === 'orders'">
                 <h2 class="mb-4">История заказов</h2>
@@ -401,6 +429,12 @@ h2 {
     background-color: var(--profile-toast-bg);
     color: var(--profile-toast-text);
     border: 1px solid var(--profile-toast-border);
+}
+
+.toast-info {
+    background-color: var(--profile-toast-info-bg);
+    color: var(--profile-toast-text);
+    border: 1px solid var(--profile-toast-info-border);
 }
 
 .custom-toast .btn-close {

@@ -58,3 +58,19 @@ export async function logout() {
     }
   });
 }
+
+export async function updateUser({ name, email, phone }) {
+  await fetch(`${API_URL}/sanctum/csrf-cookie`, { credentials: 'include' });
+  const xsrfToken = getCookie('XSRF-TOKEN');
+  const response = await fetch(`${API_URL}/api/user`, {
+    method: 'PATCH',
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-XSRF-TOKEN': xsrfToken ? decodeURIComponent(xsrfToken) : ''
+    },
+    body: JSON.stringify({ name, email, phone }),
+  });
+  if (!response.ok) throw await response.json();
+  return await response.json();
+}

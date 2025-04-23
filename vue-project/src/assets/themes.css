@@ -157,6 +157,8 @@
     --profile-table-text: #333333;
     --profile-toast-bg: #dc3545;
     --profile-toast-border: #c82333;
+    --profile-toast-info-bg: #17a2b8;
+    --profile-toast-info-border: #117a8b;
     --profile-toast-text: #ffffff;
 
     /* Register страница светлая тема */
@@ -334,6 +336,8 @@
     --profile-table-text: #b3b3b3;
     --profile-toast-bg: #b71c1c;
     --profile-toast-border: #a50d0d;
+    --profile-toast-info-bg: #116a7b;
+    --profile-toast-info-border: #0d4f5c;
     --profile-toast-text: #ffffff;
 
     /* Register страница темная тема */
