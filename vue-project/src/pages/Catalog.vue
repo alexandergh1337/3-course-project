@@ -2,6 +2,7 @@
 import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
 import { gsap } from "gsap";
+import axios from 'axios';
 
 export default {
     name: 'Catalog',
@@ -11,20 +12,7 @@ export default {
     },
     data() {
         return {
-            products: [
-                { id: 1, name: 'iPhone 15 Pro', category: 'Смартфоны', price: 120000, brand: 'Apple', image: 'https://c.dns-shop.ru/thumb/st1/fit/500/500/e853c72719633e353b65193e301cc9e9/8517b5d57caefeef97194196729bd221e1606cafc9a005f423b21eb56314ba96.jpg.webp', isFavorite: false },
-                { id: 2, name: 'Samsung Galaxy S24', category: 'Смартфоны', price: 95000, brand: 'Samsung', image: 'https://c.dns-shop.ru/thumb/st4/fit/500/500/eaeba33a42d4467c49de57f334bd36a7/666e7887f02c3b8fab3972c5e3cdf21561ec814af9a9276dc5f1b2a2163b69bf.jpg.webp', isFavorite: false },
-                { id: 3, name: 'Sony WH-1000XM5', category: 'Наушники', price: 25000, brand: 'Sony', image: 'https://c.dns-shop.ru/thumb/st4/fit/500/500/92f5097a5043cd3526f7b4f492d02459/2df2632475190df8324dd72376786ed737facef7dc387bf5fcd76f88d5fc28ec.jpg.webp', isFavorite: false },
-                { id: 4, name: 'MacBook Air M2', category: 'Ноутбуки', price: 110000, brand: 'Apple', image: 'https://c.dns-shop.ru/thumb/st1/fit/500/500/318259187cb6d5356730f526caa8ae93/f90f6266dac6bf12212723b31fa2a073677c5ca54cefbc551f8d896ae1a67af5.jpg.webp', isFavorite: false },
-                { id: 5, name: 'Apple Watch Series 9', category: 'Часы', price: 40000, brand: 'Apple', image: 'https://c.dns-shop.ru/thumb/st1/fit/500/500/523dcc5680975cb8595118649c0ab4a8/d2e0a66b3fd2f505fa9a08426a170f381706d1046622d3deea4023da1f62a9df.jpg.webp', isFavorite: false },
-                { id: 6, name: 'LG OLED55C1', category: 'Телевизоры', price: 90000, brand: 'LG', image: 'https://c.dns-shop.ru/thumb/st4/fit/500/500/15a8751d34c63702d27cc555514dd872/8f587353f780a0e16074c87a2a74c8e2088f544857aee31eb69e4b5c4ca14868.jpg.webp', isFavorite: false },
-                { id: 7, name: 'Samsung Galaxy Tab S9', category: 'Планшеты', price: 60000, brand: 'Samsung', image: 'https://c.dns-shop.ru/thumb/st4/fit/500/500/a5ed967fc7a9239d62fbd1fc2bdb1472/84b554da4de5b2a9ad8e243c4078034878fc077fc1f4fc9040d16762c143a84e.jpg.webp', isFavorite: false },
-                { id: 8, name: 'Sony PlayStation 5', category: 'Игровые консоли', price: 60000, brand: 'Sony', image: 'https://c.dns-shop.ru/thumb/st1/fit/500/500/d4c2d22f316a43bae74155ee37140f1e/18a00d64a85957b578be630af5bd9d6b7a33198b8128abad151a1c2563095d6f.jpg.webp', isFavorite: false },
-                { id: 9, name: 'Dyson V15', category: 'Бытовая техника', price: 45000, brand: 'Dyson', image: 'https://img.mvideo.ru/Big/20084585bb.jpg', isFavorite: false },
-                { id: 10, name: 'Canon EOS R5', category: 'Фотоаппараты', price: 280000, brand: 'Canon', image: 'https://c.dns-shop.ru/thumb/st1/fit/500/500/90307ec969b2809ac95376dd4280eed5/981403988ed9242c9650e34cf21f2153d22ee6150e5445826916d21cad711406.jpg.webp', isFavorite: false },
-                { id: 11, name: 'iPad Air', category: 'Планшеты', price: 65000, brand: 'Apple', image: 'https://c.dns-shop.ru/thumb/st4/fit/500/500/386b0b6edd91ef383b20469483953975/dd2c3fcc0ef29bdbc8312d93258df0dbbc5ee30ec3483ee4e8b3772a22e22342.jpg.webp', isFavorite: false },
-                { id: 12, name: 'Xiaomi Redmi Note 13', category: 'Смартфоны', price: 25000, brand: 'Xiaomi', image: 'https://c.dns-shop.ru/thumb/st1/fit/500/500/dd182dc1b0265b6b9c762a76553ecb91/c535077fe172ce14b87dc57b1c9a0d3873cf76bf608832dfa58f4f928759fe0c.jpg.webp', isFavorite: false }
-            ],
+            products: [],
             filteredProducts: [],
             categories: ['Все категории', 'Смартфоны', 'Наушники', 'Ноутбуки', 'Часы', 'Телевизоры', 'Планшеты', 'Игровые консоли', 'Бытовая техника', 'Фотоаппараты'],
             brands: ['Все бренды', 'Apple', 'Samsung', 'Sony', 'LG', 'Xiaomi', 'Dyson', 'Canon'],
@@ -81,8 +69,8 @@ export default {
 
             if (this.searchQuery) {
                 const query = this.searchQuery.toLowerCase();
-                result = result.filter(p => 
-                    p.name.toLowerCase().includes(query) || 
+                result = result.filter(p =>
+                    p.name.toLowerCase().includes(query) ||
                     p.brand.toLowerCase().includes(query) ||
                     p.category.toLowerCase().includes(query)
                 );
@@ -178,7 +166,15 @@ export default {
         }
     },
     mounted() {
-        this.filteredProducts = [...this.products];
+        axios.get('http://localhost:8000/api/products')
+            .then(response => {
+                this.products = response.data.map(p => ({ ...p, isFavorite: false }));
+                this.filteredProducts = [...this.products];
+            })
+            .catch(() => {
+                this.products = [];
+                this.filteredProducts = [];
+            });
     }
 };
 </script>
@@ -193,7 +189,8 @@ export default {
             <article class="row mb-4">
                 <article class="col-md-6 mb-3 mb-md-0">
                     <article class="input-group">
-                        <input type="text" class="form-control" v-model="searchQuery" placeholder="Поиск по названию, бренду...">
+                        <input type="text" class="form-control" v-model="searchQuery"
+                            placeholder="Поиск по названию, бренду...">
                         <button class="btn btn-primary" type="button" @click="applyFilters">Найти</button>
                     </article>
                 </article>
@@ -234,10 +231,12 @@ export default {
                                     <span class="price-range-value">{{ formatPrice(priceRange[0]) }} ₽</span>
                                     <span class="price-range-value">{{ formatPrice(priceRange[1]) }} ₽</span>
                                 </article>
-                                <input type="range" class="form-range" min="0" max="300000" step="5000" v-model.number="priceRange[0]">
-                                <input type="range" class="form-range" min="0" max="300000" step="5000" v-model.number="priceRange[1]">
+                                <input type="range" class="form-range" min="0" max="300000" step="5000"
+                                    v-model.number="priceRange[0]">
+                                <input type="range" class="form-range" min="0" max="300000" step="5000"
+                                    v-model.number="priceRange[1]">
                             </article>
-                            
+
                             <article class="d-grid gap-2">
                                 <button class="btn btn-primary" @click="applyFilters">Применить</button>
                                 <button class="btn btn-outline-secondary" @click="resetFilters">Сбросить</button>
@@ -264,11 +263,13 @@ export default {
                                     <article class="d-flex justify-content-between align-items-start">
                                         <h5 class="card-title product-title">{{ product.name }}</h5>
                                         <button class="btn btn-sm btn-icon" @click="toggleFavorite(product)">
-                                            <i class="bi" :class="product.isFavorite ? 'bi-heart-fill heart-filled' : 'bi-heart'"></i>
+                                            <i class="bi"
+                                                :class="product.isFavorite ? 'bi-heart-fill heart-filled' : 'bi-heart'"></i>
                                         </button>
                                     </article>
                                     <p class="card-text product-category mb-1">{{ product.category }}</p>
-                                    <p class="card-text product-brand mb-2"><small>Бренд: {{ product.brand }}</small></p>
+                                    <p class="card-text product-brand mb-2"><small>Бренд: {{ product.brand }}</small>
+                                    </p>
                                     <h5 class="product-price mt-auto">{{ formatPrice(product.price) }} ₽</h5>
                                     <button class="btn btn-primary mt-3" @click="addToCart(product)">
                                         <i class="bi bi-cart-plus"></i> В корзину
@@ -282,15 +283,18 @@ export default {
                         <nav aria-label="Навигация по страницам">
                             <ul class="pagination">
                                 <li class="page-item" :class="{ disabled: currentPage === 1 }">
-                                    <a class="page-link" href="#" @click.prevent="changePage(currentPage - 1)" aria-label="Предыдущая">
+                                    <a class="page-link" href="#" @click.prevent="changePage(currentPage - 1)"
+                                        aria-label="Предыдущая">
                                         <span aria-hidden="true">&laquo;</span>
                                     </a>
                                 </li>
-                                <li v-for="page in pages" :key="page" class="page-item" :class="{ active: currentPage === page }">
+                                <li v-for="page in pages" :key="page" class="page-item"
+                                    :class="{ active: currentPage === page }">
                                     <a class="page-link" href="#" @click.prevent="changePage(page)">{{ page }}</a>
                                 </li>
                                 <li class="page-item" :class="{ disabled: currentPage === totalPages }">
-                                    <a class="page-link" href="#" @click.prevent="changePage(currentPage + 1)" aria-label="Следующая">
+                                    <a class="page-link" href="#" @click.prevent="changePage(currentPage + 1)"
+                                        aria-label="Следующая">
                                         <span aria-hidden="true">&raquo;</span>
                                     </a>
                                 </li>
@@ -302,8 +306,8 @@ export default {
         </article>
     </section>
 
-    <article v-if="showToast" class="custom-toast" :class="toastClass" 
-        @mouseover="pauseToast" @mouseleave="resumeToast">
+    <article v-if="showToast" class="custom-toast" :class="toastClass" @mouseover="pauseToast"
+        @mouseleave="resumeToast">
         <article class="toast-body">
             <article>
                 <strong>{{ toastMessage.productName }}</strong> {{ toastMessage.action }}
@@ -393,13 +397,16 @@ export default {
     border-color: var(--input-border);
 }
 
-.form-select, .form-range, .form-control {
+.form-select,
+.form-range,
+.form-control {
     background-color: var(--input-bg);
     color: var(--input-text);
     border-color: var(--input-border);
 }
 
-.form-select:focus, .form-control:focus {
+.form-select:focus,
+.form-control:focus {
     background-color: var(--input-bg);
     color: var(--input-text);
     border-color: var(--input-focus-border);
