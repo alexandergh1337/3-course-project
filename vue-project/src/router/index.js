@@ -9,6 +9,7 @@ import Profile from '../pages/Profile.vue'
 import Cart from '../pages/Cart.vue'
 import Login from '../pages/Login.vue'
 import Register from '../pages/Register.vue'
+import AdminProducts from '../pages/AdminProducts.vue'
 
 const routes = [
     {
@@ -60,6 +61,11 @@ const routes = [
         path: '/register',
         name: 'Register',
         component: Register
+    },
+    {
+        path: '/admin/products',
+        name: 'AdminProducts',
+        component: AdminProducts
     },
 ]
 

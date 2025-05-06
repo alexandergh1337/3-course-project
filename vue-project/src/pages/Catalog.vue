@@ -281,8 +281,10 @@ export default {
                 <article class="col-md-6 mb-3 mb-md-0">
                     <article class="input-group">
                         <input type="text" class="form-control" v-model="searchQuery"
-                            placeholder="Поиск по названию, бренду...">
-                        <button class="btn btn-primary" type="button" @click="applyFilters">Найти</button>
+                            placeholder="Поиск по названию, бренду..." @keyup.enter="applyFilters">
+                        <button class="btn btn-outline-primary" type="button" @click="applyFilters">
+                            <i class="bi bi-search"></i>
+                        </button>
                     </article>
                 </article>
                 <article class="col-md-6 d-flex justify-content-md-end">

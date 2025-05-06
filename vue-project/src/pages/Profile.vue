@@ -283,7 +283,7 @@ export default {
                         </tr>
                     </tbody>
                 </table>
-                <nav v-if="ordersTotalPages > 1" class="d-flex justify-content-center mt-3">
+                <nav v-if="ordersTotalPages > 1" class="d-flex justify-content-center mt-5">
                     <ul class="pagination">
                         <li class="page-item" :class="{ disabled: ordersPage === 1 }">
                             <a class="page-link" href="#" @click.prevent="changeOrdersPage(ordersPage - 1)">&laquo;</a>

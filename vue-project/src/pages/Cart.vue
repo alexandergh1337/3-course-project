@@ -154,6 +154,7 @@ export default {
     }
 };
 </script>
+
 <template>
     <Navbar />
     <section class="cart-section">
@@ -202,7 +203,7 @@ export default {
                     </article>
                     <article class="cart-actions d-flex gap-2 mt-3 mt-md-0">
                         <router-link to="/catalog" class="btn btn-primary">Продолжить покупки</router-link>
-                        <button class="btn btn-warning text-white" @click="checkout">Оформить заказ</button>
+                        <button class="btn btn-warning" @click="checkout">Оформить заказ</button>
                     </article>
                 </article>
                 <nav v-if="cartTotalPages > 1" class="d-flex justify-content-center mt-4">

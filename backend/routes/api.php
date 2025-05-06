@@ -15,6 +15,12 @@ Route::middleware(['auth:sanctum'])->patch('/user', [\App\Http\Controllers\UserC
 
 Route::get('/products', [ProductController::class, 'index']);
 
+Route::get('/products/{id}', [ProductController::class, 'show']);
+Route::post('/products', [ProductController::class, 'store']);
+Route::put('/products/{id}', [ProductController::class, 'update']);
+Route::patch('/products/{id}', [ProductController::class, 'update']);
+Route::delete('/products/{id}', [ProductController::class, 'destroy']);
+
 Route::middleware(['auth:sanctum'])->get('/cart', [CartController::class, 'index']);
 Route::middleware(['auth:sanctum'])->post('/cart', [CartController::class, 'add']);
 Route::middleware(['auth:sanctum'])->delete('/cart', [CartController::class, 'remove']);

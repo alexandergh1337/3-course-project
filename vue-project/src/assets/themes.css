@@ -143,7 +143,7 @@
     --cart-total-text: #222222;
     --cart-empty-text: #666666;
     --cart-action-btn-bg: #ffc107;
-    --cart-action-btn-text: #ffffff;
+    --cart-action-btn-text: #222222;
     --cart-action-btn-hover-bg: #e0a800;
 
     /* Profile страница светлая тема */
@@ -322,7 +322,7 @@
     --cart-total-text: #ffffff;
     --cart-empty-text: #b3b3b3;
     --cart-action-btn-bg: #ffc107;
-    --cart-action-btn-text: #222222;
+    --cart-action-btn-text: #ffffff;
     --cart-action-btn-hover-bg: #e0a800;
 
     /* Profile страница темная тема */
