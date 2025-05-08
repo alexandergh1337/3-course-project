@@ -181,10 +181,13 @@ export default {
                 this.orderHistory = response.data.flatMap(order =>
                     order.items.map(item => ({
                         id: order.id + '-' + item.id,
-                        name: item.product.name,
-                        image: item.product.image,
+                        name: item.product_name,
+                        image: item.product_image,
                         price: item.price,
                         quantity: item.quantity,
+                        sum: item.product_sum,
+                        category: item.product_category,
+                        brand: item.product_brand,
                         orderId: order.id,
                         orderDate: order.created_at
                     }))
@@ -263,7 +266,7 @@ export default {
                     <thead>
                         <tr>
                             <th style="border: 1px solid black; padding: 8px;">Название</th>
-                            <th style="border: 1px solid black; padding: 8px; text-align: center;">Изображение</th>
+                            <th style="border: 1px solid black; padding: 8px;">Изображение</th>
                             <th style="border: 1px solid black; padding: 8px;">Цена</th>
                             <th style="border: 1px solid black; padding: 8px;">Количество</th>
                             <th style="border: 1px solid black; padding: 8px;">Сумма</th>
@@ -272,14 +275,13 @@ export default {
                     <tbody>
                         <tr v-for="order in paginatedOrders" :key="order.id">
                             <td style="border: 1px solid black; padding: 8px;">{{ order.name }}</td>
-                            <td style="border: 1px solid black; padding: 8px; text-align: center">
-                                <img :src="order.image" :alt="order.name"
+                            <td style="border: 1px solid black; padding: 8px;">
+                                <img :src="order.image" :alt="order.name" class="text-center"
                                     style="width: 60px; height: 60px; object-fit: contain; display: block; margin: 0 auto;" />
                             </td>
                             <td style="border: 1px solid black; padding: 8px;">{{ formatPrice(order.price) }} ₽</td>
                             <td style="border: 1px solid black; padding: 8px;">{{ order.quantity }}</td>
-                            <td style="border: 1px solid black; padding: 8px;">{{ formatPrice(order.price *
-                                order.quantity) }} ₽</td>
+                            <td style="border: 1px solid black; padding: 8px;">{{ formatPrice(order.sum) }} ₽</td>
                         </tr>
                     </tbody>
                 </table>

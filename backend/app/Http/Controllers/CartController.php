@@ -86,6 +86,11 @@ class CartController extends Controller
                 'product_id' => $item->product_id,
                 'quantity' => $item->quantity,
                 'price' => $item->product->price,
+                'product_name' => $item->product->name,
+                'product_image' => $item->product->image,
+                'product_sum' => $item->product->price * $item->quantity,
+                'product_category' => $item->product->category,
+                'product_brand' => $item->product->brand,
             ]);
         }
         CartItem::where('cart_id', $cart->id)->delete();

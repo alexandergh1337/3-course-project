@@ -141,9 +141,14 @@ h2 {
     border-color: var(--alert-success-border);
 }
 
-/* .custom-alert .btn-close {
-    filter: var(--icon-filter);
-} */
+[data-theme="dark"] .custom-alert .btn-close {
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+
+[data-theme="dark"] .custom-alert .btn-close:hover {
+    opacity: 1;
+}
 
 .form-control::placeholder {
     color: var(--input-placeholder);

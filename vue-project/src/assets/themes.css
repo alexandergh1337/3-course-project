@@ -176,6 +176,14 @@
     --correction-text: #666666;
     --login-auth-border: #dee2e6;
 
+    /* Admin Products таблица светлая тема */
+    --admin-title: #333333;
+    --admin-table-bg: #ffffff;
+    --admin-table-header-bg: #f8f9fa;
+    --admin-table-border: #dee2e6;
+    --admin-table-text: #333333;
+    --admin-table-header-text: #222222;
+
 }
 
 [data-theme="dark"] {
@@ -353,6 +361,14 @@
     --login-title: #ffffff;
     --correction-text: #b3b3b3;
     --login-auth-border: #404040;
+
+    /* Admin Products таблица темная тема */
+    --admin-title: #ffffff;
+    --admin-table-bg: #1a1a1a;
+    --admin-table-header-bg: #1c1c1c;
+    --admin-table-border: #404040;
+    --admin-table-text: #b3b3b3;
+    --admin-table-header-text: #ffffff;
 }
 
 /* Применение переменных к навбару */

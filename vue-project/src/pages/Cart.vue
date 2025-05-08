@@ -168,7 +168,7 @@ export default {
                     <thead>
                         <tr>
                             <th>Название</th>
-                            <th style="text-align: center;">Изображение</th>
+                            <th>Изображение</th>
                             <th>Цена</th>
                             <th>Количество</th>
                             <th>Сумма</th>
@@ -178,9 +178,9 @@ export default {
                     <tbody>
                         <tr v-for="item in paginatedCart" :key="item.id">
                             <td>{{ item.name }}</td>
-                            <td style="text-align: center;">
+                            <td>
                                 <img :src="item.image" :alt="item.name"
-                                    style="width: 60px; height: 60px; object-fit: contain; display: block; margin: 0 auto;" />
+                                    style="width: 60px; height: 60px; object-fit: contain; display: block; margin: 0 auto;" class="text-center"/>
                             </td>
                             <td>{{ formatPrice(item.price) }} ₽</td>
                             <td>

@@ -14,8 +14,8 @@ export default {
         return {
             products: [],
             filteredProducts: [],
-            categories: ['Все категории', 'Смартфоны', 'Наушники', 'Ноутбуки', 'Часы', 'Телевизоры', 'Планшеты', 'Игровые консоли', 'Бытовая техника', 'Фотоаппараты'],
-            brands: ['Все бренды', 'Apple', 'Samsung', 'Sony', 'LG', 'Xiaomi', 'Dyson', 'Canon'],
+            categories: ['Все категории'],
+            brands: ['Все бренды'],
             selectedCategory: 'Все категории',
             selectedBrand: 'Все бренды',
             minPrice: 0,
@@ -250,6 +250,14 @@ export default {
         axios.get('http://localhost:8000/api/products')
             .then(response => {
                 this.products = response.data.map(p => ({ ...p, isFavorite: false }));
+                const categoriesSet = new Set();
+                const brandsSet = new Set();
+                this.products.forEach(p => {
+                    if (p.category) categoriesSet.add(p.category);
+                    if (p.brand) brandsSet.add(p.brand);
+                });
+                this.categories = ['Все категории', ...Array.from(categoriesSet)];
+                this.brands = ['Все бренды', ...Array.from(brandsSet)];
                 this.filteredProducts = [...this.products];
                 return axios.get('http://localhost:8000/api/favorites', { withCredentials: true });
             })

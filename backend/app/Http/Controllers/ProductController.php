@@ -57,6 +57,11 @@ class ProductController extends Controller
         if (!$product) {
             return response()->json(['message' => 'Товар не найден'], 404);
         }
+        \App\Models\CartItem::where('product_id', $id)->delete();
+        
+        if (class_exists('App\\Models\\Favorite')) {
+            \App\Models\Favorite::where('product_id', $id)->delete();
+        }
         $product->delete();
         return response()->json(['message' => 'Товар удалён']);
     }
